@@ -40,5 +40,28 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        btnCondition01.setOnClickListener {
+
+            val myAge = 7
+
+            if ( myAge >= 20 ) {
+
+//                 질문내용이 맞으면 실행될 코드.
+                Log.d("나이검사", "성인이다냥.")
+
+            }
+            else if ( myAge >= 17 ) {
+                Log.d("나이검사", "고등학생이군냥.")
+            }
+            else if ( myAge >= 14 ) {
+                Log.d("나이검사", "중학생이래냥.")
+            }
+            else {
+                Log.d("나이검사", "초등학생냥.")
+            }
+
+        }
+
+
     }
 }
