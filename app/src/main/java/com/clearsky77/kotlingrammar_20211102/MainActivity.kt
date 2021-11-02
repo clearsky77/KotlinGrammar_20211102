@@ -63,5 +63,51 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        btnCondition02.setOnClickListener {
+
+            val aCompanySalary = 5800
+            val aCompanyMinute = 20
+            val aCompanyFinishEalry = true
+
+//            1번 지원자는 A회사에 취업할까?
+//             연봉만 5천이상이면 OK
+            if ( aCompanySalary >= 5000 ) {
+                Log.d("1번 지원자", "입사한다냥 ~ㅂ~")
+            } else {
+                Log.d("1번 지원자", "입사 거부다냥! ='ㅈ'=")
+            }
+
+            // 2번 지원자 출퇴근이 10분 이내
+            if (aCompanyMinute <= 10) {
+                Log.d("2번 지원자", "입사한다냥 ~ㅂ~")
+            } else {
+                Log.d("2번 지원자", "입사 거부다냥 ='ㅈ'=")
+            }
+
+            // 3번 지원자 칼퇴
+            if (aCompanyFinishEalry) {
+                Log.d("3번 지원자", "입사한다냥 ~ㅂ~")
+            } else {
+                Log.d("3번 지원자", "입사 거부다냥 ='ㅈ'=")
+            }
+
+            // 4번 지원자 연봉 4천 이상 and 거리 10분 이내
+            if (aCompanySalary >= 4000 && aCompanyMinute <= 10) {
+                Log.d("4번 지원자", "입사한다냥 ~ㅂ~")
+            } else {
+                Log.d("4번 지원자", "입사 거부다냥 ='ㅈ'=")
+            }
+
+            // 5번 지원자 거리 20분 이내 or 칼퇴
+            if (aCompanyMinute <= 20 || aCompanyFinishEalry) {
+                Log.d("5번 지원자", "입사한다냥 ~ㅂ~")
+            } else {
+                Log.d("5번 지원자", "입사 거부다냥 ='ㅈ'=")
+            }
+
+        }
+
+
+
     }
 }
