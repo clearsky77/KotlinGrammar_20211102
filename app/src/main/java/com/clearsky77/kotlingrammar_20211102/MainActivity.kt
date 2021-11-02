@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         btnVariable01.setOnClickListener {
 //            기본적인 변수 만들고 / 대입하고 / 활용 (로그찍기)
 //            1. 변수 공간만 만들기
@@ -28,5 +27,18 @@ class MainActivity : AppCompatActivity() {
 //            참고 - 모든 변수는 참조형 변수. 부가 기능 있음. => 공통 기능 : String으로 변환 가능. => toString()
 
         }
+
+
+        btnVariable02.setOnClickListener {
+//            변수를 만들고 -> 바로 데이터 대입.
+            val myBirthYear = 1977 // 대입한 값의 형태? 정수 (Int) => myBirthYear도 Int 형태로 결정됨.
+            Log.d("출생년도", myBirthYear.toString())
+//            2021년의 나이는 몇살?
+            val myKoreanAge = 2021 - myBirthYear + 1  // 변수를 대입할때, 기능 실행(계산식)의 결과를 바로 대입 가능.
+            Log.d("나이", myKoreanAge.toString())
+
+        }
+
+
     }
 }
